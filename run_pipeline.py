@@ -1,22 +1,4 @@
-"""
-run_pipeline.py
 
-THIS IS THE FILE YOU RUN.
-
-It does exactly 4 things, in order, every time you run it:
-  1. Downloads the Netflix dataset from Kaggle
-  2. Computes its fingerprint (hash) and compares to last time
-  3. If unchanged -> stops here, prints "skipping" (this is the
-     idempotent behavior the assignment asks for)
-  4. If changed/new -> uploads it to your S3 bucket, then remembers
-     the new fingerprint for next time
-
-Run it with:
-    python3 run_pipeline.py
-
-Run it a SECOND time right after, and you should see it skip the
-upload -- that's your proof the pipeline is idempotent.
-"""
 
 import os
 import shutil
